@@ -5,7 +5,7 @@ const faculty = new mongoose.Schema({
     phone: String,
     salary:Number,
     address: String,
-    dateOfJoining: Date
+    dateOfJoining: String
 });
 
 module.exports = mongoose.model('faculty',faculty);
