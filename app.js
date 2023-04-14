@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const routes = require('./routes/route');
+const routes = require('./routes');
 
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://localhost:27017');
