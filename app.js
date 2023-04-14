@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const faculty = require('./routes/faculty');
+const routes = require('./routes/route');
 
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://localhost:27017');
@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/faculty',faculty);
+app.use('/',routes);
 
 module.exports = app;
